@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ItemInfo xmlns:android="http://schemas.android.com/apk/res/android">
+    <Item id="mat001" name="木頭" description="基本材料，可由砍伐樹木來取得">
+    </Item>
+    <Item id="mat002" name="鐵礦石" description="基本材料，可由挖掘礦坑來取得">
+    </Item>
+    <Item id="tool001" name="斧頭" description="最基本的伐木工具">
+        <Formula id="mat001" num="2" />
+        <Formula id="mat002" num="1" />
+    </Item>
+</ItemInfo>
