@@ -6,14 +6,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 
+import st.kimsmik.thesurvivor.managers.CharacterManager;
+import st.kimsmik.thesurvivor.managers.ConversationManager;
+import st.kimsmik.thesurvivor.managers.ItemManager;
+
 
 public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
+        ConversationManager.ins().init(this);
+        CharacterManager.ins().init(this);
+        ItemManager.ins().init(this);
     }
 
 

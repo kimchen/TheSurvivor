@@ -1,4 +1,4 @@
-package st.kimsmik.thesurvivor;
+package st.kimsmik.thesurvivor.managers;
 
 import android.content.Context;
 import android.content.res.XmlResourceParser;
@@ -8,7 +8,8 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
-import st.kimsmik.thesurvivor.Objects.ItemInfo;
+import st.kimsmik.thesurvivor.objects.ItemInfo;
+import st.kimsmik.thesurvivor.R;
 
 /**
  * Created by Kim on 2016/1/24.

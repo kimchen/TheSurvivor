@@ -1,4 +1,4 @@
-package st.kimsmik.thesurvivor.Objects;
+package st.kimsmik.thesurvivor.objects;
 
 /**
  * Created by Kim on 2016/1/24.

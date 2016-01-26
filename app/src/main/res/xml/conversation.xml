@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Conversations xmlns:android="http://schemas.android.com/apk/res/android">
+    <Conversation id="con0001" character="ch001" text="這...這是哪裡..." />
+</Conversations>

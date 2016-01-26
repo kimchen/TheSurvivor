@@ -1,23 +1,115 @@
 package st.kimsmik.thesurvivor;
 
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import st.kimsmik.thesurvivor.Objects.CharacterInfo;
+import st.kimsmik.thesurvivor.objects.CharacterInfo;
 
 /**
  * Created by Kim on 2016/1/24.
  */
 public class Player {
+    private static Player mIns = null;
+    private Player(){}
+    public static Player ins(){
+        if(mIns == null){
+            mIns = new Player();
+        }
+        return mIns;
+    }
+
+    public enum HEALTH_STATUS {
+        GOOD("good"),
+        BAD("bad");
+        private String text="";
+        HEALTH_STATUS(String s){
+            this.text = s;
+        }
+        public String getText(){
+            return this.text;
+        }
+    }
+
     private Inventory bag = new Inventory();
     private Inventory warehouse = new Inventory();
+    private UiRef uiRef = null;
 
-    private int stamina = 100;
-    private int spirit = 100;
-    private int full = 100;
-    private int water = 100;
+    private Integer stamina = 100;
+    public void setStamina(Integer i){
+        this.stamina = i;
+        this.uiRef.staminaText.setText(this.stamina.toString());
+    }
+    public Integer getStamina(){
+        return this.stamina;
+    }
+
+    private Integer spirit = 100;
+    public void setSpirit(Integer i){
+        this.spirit = i;
+        this.uiRef.spiritText.setText(this.spirit.toString());
+    }
+    public Integer getSpirit(){
+        return this.spirit;
+    }
+
+    private Integer full = 100;
+    public void setFull(Integer i){
+        this.full = i;
+        this.uiRef.fullText.setText(this.full.toString());
+    }
+    public Integer getFull(){
+        return this.full;
+    }
+
+    private Integer water = 100;
+    public void setWater(Integer i){
+        this.water = i;
+        this.uiRef.waterText.setText(this.water.toString());
+    }
+    public Integer getWater(){
+        return this.water;
+    }
+
+    private Integer coins = 0;
+    public void setCoins(Integer i){
+        this.coins = i;
+        this.uiRef.coinsText.setText(this.coins.toString());
+    }
+    public Integer getCoins(){
+        return this.coins;
+    }
+
+    private HEALTH_STATUS health = HEALTH_STATUS.GOOD;
+    public void setHealth(HEALTH_STATUS h){
+        this.health = h;
+        this.uiRef.healthText.setText(this.health.getText());
+    }
+    public HEALTH_STATUS getHealth(){
+        return this.health;
+    }
 
     private List<CharacterInfo> parterners = new ArrayList<>();
+
+    public void setUiRef(UiRef ref){
+        this.uiRef = ref;
+        this.uiRef.staminaText.setText(this.stamina.toString());
+        this.uiRef.spiritText.setText(this.spirit.toString());
+        this.uiRef.fullText.setText(this.full.toString());
+        this.uiRef.waterText.setText(this.water.toString());
+        this.uiRef.coinsText.setText(this.coins.toString());
+        this.uiRef.healthText.setText(this.health.getText());
+    }
+
+    public static class UiRef{
+            public TextView staminaText = null;
+            public TextView spiritText = null;
+            public TextView fullText = null;
+            public TextView waterText = null;
+            public TextView coinsText = null;
+            public TextView healthText = null;
+    }
 //    public boolean buildItem(String id,int num){
 //        ItemInfo item =ItemManager.ins().getItem(id);
 //        Set<Map.Entry<String,Integer>> formula = item.getFormula();

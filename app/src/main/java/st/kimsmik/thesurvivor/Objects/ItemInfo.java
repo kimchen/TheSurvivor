@@ -1,6 +1,5 @@
-package st.kimsmik.thesurvivor.Objects;
+package st.kimsmik.thesurvivor.objects;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -33,9 +32,9 @@ public class ItemInfo {
         return this.description;
     }
 
-    private ConcurrentHashMap<String,Integer> formula = new ConcurrentHashMap<>();
-    public void addFormula(String id,int num){
-        formula.put(id,num);
+    private ConcurrentHashMap<String,Integer> formula = new ConcurrentHashMap<String,Integer>();
+    public void addFormula(String fid,int num){
+        //formula.put(fid,num);
     }
     public void setFormula(ConcurrentHashMap chm){
         this.formula = chm;

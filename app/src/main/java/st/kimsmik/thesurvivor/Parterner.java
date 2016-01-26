@@ -1,7 +1,7 @@
 package st.kimsmik.thesurvivor;
 
 
-import st.kimsmik.thesurvivor.Objects.CharacterInfo;
+import st.kimsmik.thesurvivor.objects.CharacterInfo;
 
 /**
  * Created by Kim on 2016/1/24.
