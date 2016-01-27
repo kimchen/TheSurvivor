@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:paddingTop="100dp"
     android:paddingBottom="100dp"
     android:id="@+id/dialogBg"
@@ -9,21 +9,33 @@
     android:paddingRight="20dp"
     android:background="#00000000">
 
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/anchor"
+        android:layout_centerInParent="true" />
+
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:id="@+id/targetImg"
         android:scaleType="fitCenter"
         android:src="@drawable/smith"
-        android:layout_weight="1"
-        android:maxHeight="0dp" />
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/anchor"
+        android:layout_alignParentTop="true"
+        />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:background="@drawable/dialog_border"
-        android:layout_weight="1">
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/anchor"
+        android:layout_alignParentBottom="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,19 +43,21 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Player"
             android:id="@+id/nameText"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:textSize="24dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
             android:id="@+id/dialogText"
+            android:textColor="#000000"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp" />
     </LinearLayout>
-</LinearLayout>
+
+</RelativeLayout>

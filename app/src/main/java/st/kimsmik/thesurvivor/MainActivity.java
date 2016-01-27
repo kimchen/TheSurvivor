@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 
+
 import st.kimsmik.thesurvivor.managers.CharacterManager;
 import st.kimsmik.thesurvivor.managers.ConversationManager;
 import st.kimsmik.thesurvivor.managers.ItemManager;
@@ -24,6 +25,7 @@ public class MainActivity extends ActionBarActivity {
         CharacterManager.ins().init(this);
         ItemManager.ins().init(this);
     }
+
 
 
     @Override
