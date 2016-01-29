@@ -1,5 +1,6 @@
 package st.kimsmik.thesurvivor;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -8,9 +9,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import st.kimsmik.thesurvivor.managers.CharacterManager;
@@ -22,11 +26,11 @@ import st.kimsmik.thesurvivor.objects.ConversationInfo;
  * Created by Kim on 2016/1/26.
  */
 public class ConversationDialog extends Dialog {
-    private static int DIALOG_SPEED = 500;
+    private static int DIALOG_SPEED = 200;
     private TextView nameText = null;
     private ImageView targetImg = null;
     private TextView dialogText = null;
-    private LinearLayout dialogBg = null;
+    private RelativeLayout dialogBg = null;
     private DialogHandler dialogHandler = null;
 
     private Thread dialogThread = null;
@@ -37,11 +41,16 @@ public class ConversationDialog extends Dialog {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_conversation);
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        int h = ( (Activity)context).getWindow().getDecorView().getHeight()*9/10;
+        int w = ( (Activity)context).getWindow().getDecorView().getWidth()*9/10;
+        getWindow().setLayout(w,h);
+
         dialogHandler = new DialogHandler();
         this.nameText = (TextView) findViewById(R.id.nameText);
         this.targetImg = (ImageView) findViewById(R.id.targetImg);
         this.dialogText = (TextView) findViewById(R.id.dialogText);
-        this.dialogBg = (LinearLayout)findViewById(R.id.dialogBg);
+        this.dialogBg = (RelativeLayout)findViewById(R.id.dialogBg);
     }
 
     public void startConversation(String id){
@@ -96,7 +105,8 @@ public class ConversationDialog extends Dialog {
                 }
             }
         });
-        this.show();
+        show();
+
     }
 
     private class DialogHandler extends Handler{
