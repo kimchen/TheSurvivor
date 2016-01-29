@@ -1,5 +1,7 @@
 package st.kimsmik.thesurvivor.objects;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -39,7 +41,8 @@ public class ItemInfo {
     public void setFormula(ConcurrentHashMap chm){
         this.formula = chm;
     }
-    public Set<Map.Entry<String,Integer>> getFormula(){
-        return this.formula.entrySet();
+    public List< Map.Entry<String,Integer>> getFormula(){
+        List< Map.Entry<String,Integer>> list = new ArrayList<>(formula.entrySet());
+        return list;
     }
 }

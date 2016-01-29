@@ -1,7 +1,10 @@
 package st.kimsmik.thesurvivor;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -57,7 +60,8 @@ public class Inventory {
         }
     }
 
-    public Set<Map.Entry<String,Integer>> getAllItems(){
-        return itemTable.entrySet();
+    public List< Map.Entry<String,Integer>> getAllItems(){
+        List< Map.Entry<String,Integer>> list = new ArrayList<>(itemTable.entrySet());
+        return list;
     }
 }

@@ -12,7 +12,10 @@ import st.kimsmik.thesurvivor.objects.CharacterInfo;
  */
 public class Player {
     private static Player mIns = null;
-    private Player(){}
+    private Player(){
+        bag.addItem("mat001",10);
+        bag.addItem("mat002",10);
+    }
     public static Player ins(){
         if(mIns == null){
             mIns = new Player();
@@ -33,7 +36,13 @@ public class Player {
     }
 
     private Inventory bag = new Inventory();
+    public Inventory getBag(){
+        return bag;
+    }
     private Inventory warehouse = new Inventory();
+    public Inventory getWarehouse(){
+        return warehouse;
+    }
     private UiRef uiRef = null;
 
     private Integer stamina = 100;

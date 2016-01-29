@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/black_border">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gold_border"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/itemNameText"
+            android:textColor="#ff000000"
+            android:text="item name"
+            android:textSize="20dp"
+            android:layout_weight="5"
+            android:padding="5dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/itemNumText"
+            android:textColor="#ffffffff"
+            android:text="999"
+            android:textSize="20dp"
+            android:background="#ff008dff"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="item description"
+        android:id="@+id/itemDesText"
+        android:textColor="#ff000000"
+        android:layout_margin="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="使用"
+            android:id="@+id/useBtn"
+            android:layout_weight="1"
+            android:textSize="22dp"
+            android:background="@drawable/confirm_border"
+            android:layout_margin="5dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:id="@+id/cancelBtn"
+            android:layout_weight="1"
+            android:textSize="22dp"
+            android:background="@drawable/cancel_border"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
