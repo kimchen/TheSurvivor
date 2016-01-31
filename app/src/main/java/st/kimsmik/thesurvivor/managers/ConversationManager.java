@@ -39,10 +39,11 @@ public class ConversationManager {
                         conversationInfo = new ConversationInfo();
                         String id = parser.getAttributeValue(null, "id");
                         conversationInfo.setId(id);
-                        conversationInfo.setCharacter(parser.getAttributeValue(null, "character"));
-                        conversationInfo.setText(parser.getAttributeValue(null, "text"));
                         objMap.put(id, conversationInfo);
-                        Log.i("Test","ConversationInfo ID:"+id);
+                    }else if(parser.getName().equals("Dialog")){
+                        String target = parser.getAttributeValue(null, "character");
+                        String text = parser.getAttributeValue(null, "text");
+                        conversationInfo.addDialog(target,text);
                     }
                 }
                 parser.next();

@@ -18,11 +18,11 @@ import java.util.logging.Logger;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment {
+public class MainFragment extends Fragment {
 
     private Player player = null;
     private FrameLayout mainFrame = null;
-    public MainActivityFragment() {
+    public MainFragment() {
         this.player = Player.ins();
     }
 
@@ -37,7 +37,7 @@ public class MainActivityFragment extends Fragment {
         uiRef.fullText = (TextView)root.findViewById(R.id.fullText);
         uiRef.waterText = (TextView)root.findViewById(R.id.waterText);
         uiRef.coinsText = (TextView)root.findViewById(R.id.coinText);
-        uiRef.healthText = (TextView)root.findViewById(R.id.healthText);
+        uiRef.stateText = (TextView)root.findViewById(R.id.stateText);
         player.setUiRef(uiRef);
 
         mainFrame = (FrameLayout)root.findViewById(R.id.mainFrame);

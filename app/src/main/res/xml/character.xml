@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Characters xmlns:android="http://schemas.android.com/apk/res/android">
-    <Character id="ch001" name="卡瑞飛" description=""/>
+    <Character id="question" name="？？？" description=""/>
+    <Character id="carefree" name="卡爾飛" description=""/>
+    <Character id="old_man" name="老伯" description=""/>
 </Characters>

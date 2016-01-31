@@ -6,9 +6,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="背包"
+        android:text="@string/backpack"
         android:id="@+id/inventoryName"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="#ffffffff"
         android:gravity="center_horizontal"

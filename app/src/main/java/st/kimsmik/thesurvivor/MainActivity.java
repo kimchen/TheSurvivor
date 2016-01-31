@@ -1,5 +1,8 @@
 package st.kimsmik.thesurvivor;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -46,7 +49,14 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    public void replaceFragment(Fragment target){
+
+        FragmentManager fragmentMgr = getSupportFragmentManager();
+        FragmentTransaction fragmentTrans = fragmentMgr.beginTransaction();
+        fragmentTrans.replace(R.id.fragment,target);
+        fragmentTrans.commit();
     }
 }

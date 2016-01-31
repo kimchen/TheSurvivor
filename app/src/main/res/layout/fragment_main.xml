@@ -16,7 +16,7 @@
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:padding="10dp"
-            android:layout_marginTop="3dp"></FrameLayout>
+            android:layout_marginTop="3dp" />
 
         <LinearLayout
             android:layout_weight="2.5"
@@ -32,7 +32,6 @@
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/linearLayout"
                 android:gravity="center">
 
                 <TextView
@@ -40,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_weight="1"
-                    android:text="體力"
+                    android:text="@string/stamina"
                     android:gravity="center" />
 
                 <TextView
@@ -59,7 +58,6 @@
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/linearLayout2"
                 android:gravity="center">
 
                 <TextView
@@ -67,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_weight="1"
-                    android:text="精神"
+                    android:text="@string/spirit"
                     android:gravity="center" />
 
                 <TextView
@@ -86,7 +84,6 @@
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/linearLayout3"
                 android:gravity="center">
 
                 <TextView
@@ -94,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_weight="1"
-                    android:text="飽足"
+                    android:text="@string/full"
                     android:gravity="center" />
 
                 <TextView
@@ -113,7 +110,6 @@
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/linearLayout4"
                 android:gravity="center">
 
                 <TextView
@@ -121,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_weight="1"
-                    android:text="水分"
+                    android:text="@string/water"
                     android:gravity="center" />
 
                 <TextView
@@ -139,7 +135,6 @@
                 android:orientation="vertical"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:id="@+id/linearLayout5"
                 android:gravity="center">
 
                 <TextView
@@ -147,7 +142,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_weight="1"
-                    android:text="健康"
+                    android:text="@string/state"
                     android:gravity="center"/>
 
                 <TextView
@@ -155,9 +150,9 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:layout_weight="1"
-                    android:text="狀態"
+                    android:text="健康"
                     android:gravity="center"
-                    android:id="@+id/healthText" />
+                    android:id="@+id/stateText" />
             </LinearLayout>
         </LinearLayout>
 

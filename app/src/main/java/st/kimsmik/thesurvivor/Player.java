@@ -90,13 +90,13 @@ public class Player {
         return this.coins;
     }
 
-    private HEALTH_STATUS health = HEALTH_STATUS.GOOD;
-    public void setHealth(HEALTH_STATUS h){
-        this.health = h;
-        this.uiRef.healthText.setText(this.health.getText());
+    private HEALTH_STATUS state = HEALTH_STATUS.GOOD;
+    public void setState(HEALTH_STATUS h){
+        this.state = h;
+        this.uiRef.stateText.setText(this.state.getText());
     }
-    public HEALTH_STATUS getHealth(){
-        return this.health;
+    public HEALTH_STATUS getState(){
+        return this.state;
     }
 
     private List<CharacterInfo> parterners = new ArrayList<>();
@@ -108,7 +108,7 @@ public class Player {
         this.uiRef.fullText.setText(this.full.toString());
         this.uiRef.waterText.setText(this.water.toString());
         this.uiRef.coinsText.setText(this.coins.toString());
-        this.uiRef.healthText.setText(this.health.getText());
+        this.uiRef.stateText.setText(this.state.getText());
     }
 
     public static class UiRef{
@@ -117,7 +117,7 @@ public class Player {
             public TextView fullText = null;
             public TextView waterText = null;
             public TextView coinsText = null;
-            public TextView healthText = null;
+            public TextView stateText = null;
     }
 //    public boolean buildItem(String id,int num){
 //        ItemInfo item =ItemManager.ins().getItem(id);
